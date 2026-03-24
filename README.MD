@@ -4,7 +4,7 @@
 
 **为 IntelliJ IDEA 带来丝滑滚动体验的轻量插件**
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue?style=flat-square)](https://github.com/yourname/smooth-scroll-lite/releases)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue?style=flat-square)](https://github.com/ransen1337-star/smooth-scroll-lite/releases)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-IntelliJ%20IDEA%202025.2+-orange?style=flat-square)](https://www.jetbrains.com/idea/)
 [![Kotlin](https://img.shields.io/badge/kotlin-2.1.20-purple?style=flat-square&logo=kotlin)](https://kotlinlang.org/)
@@ -37,7 +37,7 @@
 
 **方式二：直接安装 zip**
 
-1. 下载 [Releases](https://github.com/yourname/smooth-scroll-lite/releases) 页面的最新 `.zip`
+1. 下载 [Releases](https://github.com/ransen1337-star/smooth-scroll-lite/releases) 页面的最新 `.zip`
 2. 打开 IDEA → `Settings → Plugins → ⚙️ → Install Plugin from Disk`
 3. 选择 `.zip` 文件，重启 IDE
 
