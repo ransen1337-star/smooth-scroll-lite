@@ -1,0 +1,51 @@
+<idea-plugin>
+    <id>com.yourname.scroll.smooth-scroll-lite</id>
+    <name>Smooth Scroll Lite</name>
+    <vendor url="https://github.com/yourname">YourName</vendor>
+
+    <description><![CDATA[
+        为 IntelliJ IDEA 编辑器带来丝滑的鼠标滚轮滚动体验。<br/>
+        使用指数缓动算法，让代码滚动如丝般顺滑。<br/><br/>
+        <b>功能：</b>
+        <ul>
+            <li>平滑动画滚动，告别跳跃式滚动</li>
+            <li>支持水平滚动（Shift + 滚轮）</li>
+            <li>可调节滚动速度与缓动强度</li>
+            <li>底部状态栏实时 FPS 显示</li>
+        </ul>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <action id="SmoothScrollLite.Toggle"
+                class="com.yourname.scroll.smoothscrolllite.SmoothScrollAction"
+                text="Smooth Scroll"
+                description="配置丝滑滚动设置">
+            <add-to-group group-id="MainToolbarRight" anchor="first"/>
+            <add-to-group group-id="ViewMenu" anchor="last"/>
+        </action>
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity
+            implementation="com.yourname.scroll.smoothscrolllite.SmoothScrollStartupActivity"/>
+
+        <applicationService
+            serviceImplementation="com.yourname.scroll.smoothscrolllite.SmoothScrollPlugin"/>
+
+        <applicationService
+            serviceImplementation="com.yourname.scroll.smoothscrolllite.SmoothScrollSettings"/>
+
+        <applicationConfigurable
+            parentId="tools"
+            instance="com.yourname.scroll.smoothscrolllite.SmoothScrollConfigurable"
+            id="com.yourname.scroll.smoothscrolllite.SmoothScrollConfigurable"
+            displayName="Smooth Scroll Lite"/>
+
+        <statusBarWidgetFactory
+            implementation="com.yourname.scroll.smoothscrolllite.FpsStatusBarWidgetFactory"
+            id="SmoothScrollLite.FPS"
+            order="first"/>
+    </extensions>
+</idea-plugin>
